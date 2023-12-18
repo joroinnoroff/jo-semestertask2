@@ -128,22 +128,22 @@ export default function Navbar() {
                     <Link href={"/profile/bids"}>
                       <h1 className="w-max font-light  hover:scale-105 hover:font-bold transition-all text-sm md:text-lg">Your Bids</h1>
                     </Link>
-                    <div>
-                      <small className="text-sm flex flex-row">
-                        Credit left: {credits}
-                      </small>
-                      <Link href={"/profile/settings"}>
-                        <span className="mr- w-[] flex">
-                          {user?.avatar ? (
-                            <img src={user.avatar} alt="" className="w-[30px] h-[30px] md:w-[60px] md:h-[40px] rounded-3xl" />
-                          ) : (
-                            <Settings />
-                          )}
-                        </span>
-                      </Link>
-                      <button className="text-sm"
-                        onClick={() => handleLogout()}>Sign Out</button>
-                    </div>
+
+                    <small className="text-sm flex flex-row">
+                      Credit left: {credits}
+                    </small>
+                    <Link href={"/profile/settings"}>
+                      <span className="mr- w-[] flex">
+                        {user?.avatar ? (
+                          <img src={user.avatar} alt="" className="w-[30px] h-[30px] md:w-[60px] md:h-[40px] rounded-3xl" />
+                        ) : (
+                          <Settings />
+                        )}
+                      </span>
+                    </Link>
+                    <button className="text-sm"
+                      onClick={() => handleLogout()}>Sign Out</button>
+
 
                   </div>
 
