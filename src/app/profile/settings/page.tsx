@@ -127,7 +127,7 @@ const SettingsPage: React.FC = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container mt-32'>
       <h1 className='text-3xl'>Your Profile</h1>
       {isLoggedIn && user && profile && (
         <>
