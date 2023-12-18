@@ -19,7 +19,7 @@ const EditPage = () => {
     Id: '',
     title: '',
     description: '',
-    tags: [], // Initialize tags as an empty array
+    tags: [],
     media: 'url',
   });
 
@@ -106,7 +106,7 @@ const EditPage = () => {
 
       if (response.ok) {
         toast.success('Listing deleted successfully');
-        router.push('/profile/listings'); // Redirect to /profile/listings
+        router.push('/profile/listings');
       }
     } catch (error) {
       console.error('Error deleting listing:', error);

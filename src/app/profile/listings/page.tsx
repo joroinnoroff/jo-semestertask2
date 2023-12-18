@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { API_SOCIAL_URL } from '../../api/constants';
 
-// Define the User type
+
 interface User {
   name: string;
   email: string;
@@ -32,7 +32,7 @@ interface Bid {
   id: string;
   amount: number;
   bidderName: string;
-  // Add other bid properties as needed
+
 }
 
 // UserListings component
@@ -42,7 +42,7 @@ const UserListings: React.FC = () => {
   const [userListings, setUserListings] = useState<Listing[]>([]);
 
   useEffect(() => {
-    // Fetch user information when the component mounts
+
     const fetchUser = async () => {
       try {
         const storedUser = localStorage.getItem('profile');
@@ -51,7 +51,7 @@ const UserListings: React.FC = () => {
           setUser(parsedUser);
           setIsLoggedIn(true);
 
-          // Fetch user listings with authorization header
+
           const response = await authFetch(`${API_SOCIAL_URL}/profiles/${parsedUser.name}/listings?_bids=true`, {
             headers: {
               'Authorization': `Bearer ${parsedUser.token}`,
@@ -73,13 +73,13 @@ const UserListings: React.FC = () => {
     };
 
 
-    fetchUser(); // Invoke the fetchUser function
+    fetchUser();
 
-    // Cleanup function (optional)
+
     return () => {
-      // Any cleanup logic if needed
+
     };
-  }, []); // Empty dependency array means this effect runs only once on mount
+  }, []);
 
   const fadeInVariants = {
     initial: { opacity: 0 },
@@ -107,7 +107,7 @@ const UserListings: React.FC = () => {
 
           <div className='mt-10 flex  flex-wrap gap-10 m-auto  justify-center'>
 
-            {/* Render other user information as needed */}
+
             {userListings.map((listing) => (
               <motion.div
                 key={listing.id}

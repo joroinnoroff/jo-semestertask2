@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 import Link from 'next/link';
-import { Toaster, toast } from 'sonner'
-import { redirect, useRouter } from 'next/navigation';
+
+import { useRouter } from 'next/navigation';
 import { login } from '../../(auth)/login/index';
 
 const LoginPage = () => {

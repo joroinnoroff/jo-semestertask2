@@ -4,7 +4,7 @@ import { authFetch } from '@/app/api/storage/authFetch';
 import React, { useEffect, useState } from 'react';
 import '../../../app/globals.css'
 
-// Define the User type
+
 interface User {
   name: string;
   email: string;
@@ -13,7 +13,7 @@ interface User {
   wins: string[];
 }
 
-// Profile type
+
 interface Profile {
   name: string;
   email: string;
@@ -137,7 +137,7 @@ const SettingsPage: React.FC = () => {
           <p>Number of Wins: {profile.wins?.length || 0}</p>
 
 
-          {/* Conditionally render the input field and button based on the editing state */}
+
           <div className=''>
             <img src={isEditing ? inputFieldValue : profile.avatar} alt="User Avatar" />
             <div className='flex mt-20'>
