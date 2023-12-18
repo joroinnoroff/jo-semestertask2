@@ -17,7 +17,7 @@ interface UserProfile {
   name: string;
   avatar?: string;
   credits?: number;
-  // Add other properties as needed
+
 }
 
 export default function Navbar() {
@@ -40,12 +40,12 @@ export default function Navbar() {
       setIsLoggedIn(false);
       setCredits(0);
     }
-  }, []); // Only run this effect once when the component mounts
+  }, []);
 
   useEffect(() => {
-    // Update the credits whenever the user changes
+
     setCredits(user ? user.credits ?? 0 : 0);
-  }, [user]); // Run this effect whenever the user changes
+  }, [user]);
 
 
   const handleLogout = () => {
@@ -122,11 +122,11 @@ export default function Navbar() {
                   <div className="flex  justify-between gap-3 md:gap-10 w-max items-center">
 
                     <Link href={"/profile/listings"}>
-                      <h1 className="w-max font-light hover:scale-105 hover:font-bold transition-all text-lg">Your Listings</h1>
+                      <h1 className="w-max font-light hover:scale-105 hover:font-bold transition-all text-sm md:text-lg">Your Listings</h1>
                     </Link>
 
                     <Link href={"/profile/bids"}>
-                      <h1 className="w-max font-light  hover:scale-105 hover:font-bold transition-all text-lg">Your Bids</h1>
+                      <h1 className="w-max font-light  hover:scale-105 hover:font-bold transition-all text-sm md:text-lg">Your Bids</h1>
                     </Link>
                     <small className="text-sm flex flex-row">
                       Credit left: {credits}
