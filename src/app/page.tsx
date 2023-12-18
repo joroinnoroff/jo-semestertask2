@@ -3,14 +3,12 @@ import Image from 'next/image'
 import StickySections from '../app/stickySection';
 import Lottie from "lottie-react";
 import auctionAni from "../assets/animations/auctionanimation.json";
-import { useState, useEffect, JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowDown, Plus, Store } from 'lucide-react';
 
-import { API_SOCIAL_URL } from './api/constants';
-import nLogo from '../assets/images/norofflogo.png'
-import UsersItems from './components/usersItems';
-import { authFetch } from './api/storage/authFetch';
+import nLogo from '../app/images/NoroffLogo.png'
+
 import NewestItems from './components/NewestItems';
 import { motion } from 'framer-motion';
 
