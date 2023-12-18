@@ -119,7 +119,7 @@ export default function Navbar() {
             <>
               <ul className="flex items-center   ">
                 <div className="px-4 py-2 ml-2 text-black w-full rounded-full text-md flex justify-between gap-3 items-center">
-                  <div className="flex  justify-between gap-3 md:gap-10 w-max items-center">
+                  <div className="flex  justify-between gap-3 md:gap-10 w-full flex-wrap items-center">
 
                     <Link href={"/profile/listings"}>
                       <h1 className="w-max font-light hover:scale-105 hover:font-bold transition-all text-sm md:text-lg">Your Listings</h1>
@@ -128,25 +128,22 @@ export default function Navbar() {
                     <Link href={"/profile/bids"}>
                       <h1 className="w-max font-light  hover:scale-105 hover:font-bold transition-all text-sm md:text-lg">Your Bids</h1>
                     </Link>
-                    <small className="text-sm flex flex-row">
-                      Credit left: {credits}
-                    </small>
-
-
-                    <Link href={"/profile/settings"}>
-                      <span className="mr- w-[] flex">
-
-
-                        {user?.avatar ? (
-                          <img src={user.avatar} alt="" className="w-[30px] h-[30px] md:w-[60px] md:h-[40px] rounded-3xl" />
-                        ) : (
-                          <Settings />
-                        )}
-
-                      </span>
-                    </Link>
-                    <button className="text-sm"
-                      onClick={() => handleLogout()}>Sign Out</button>
+                    <div>
+                      <small className="text-sm flex flex-row">
+                        Credit left: {credits}
+                      </small>
+                      <Link href={"/profile/settings"}>
+                        <span className="mr- w-[] flex">
+                          {user?.avatar ? (
+                            <img src={user.avatar} alt="" className="w-[30px] h-[30px] md:w-[60px] md:h-[40px] rounded-3xl" />
+                          ) : (
+                            <Settings />
+                          )}
+                        </span>
+                      </Link>
+                      <button className="text-sm"
+                        onClick={() => handleLogout()}>Sign Out</button>
+                    </div>
 
                   </div>
 
