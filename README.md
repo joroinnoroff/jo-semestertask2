@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project 
 
+live site = [https://jo-semestertask2.vercel.app/]
+
 ## Getting Started
 
 First, run the development server:
