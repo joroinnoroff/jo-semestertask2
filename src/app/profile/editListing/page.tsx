@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, ChangeEvent } from 'react';
 
-import { redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 
 import { Image, Trash } from 'lucide-react';
