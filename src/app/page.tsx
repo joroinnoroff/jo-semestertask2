@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowDown, Plus, Store } from 'lucide-react';
 
-import nLogo from '../app/images/NoroffLogo.png'
+import nLogo from '../app/images/norofflogo.png'
 
 import NewestItems from './components/NewestItems';
 import { motion } from 'framer-motion';
