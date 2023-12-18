@@ -119,7 +119,7 @@ export default function Navbar() {
             <>
               <ul className="flex items-center   ">
                 <div className="px-4 py-2 ml-2 text-black w-full rounded-full text-md flex justify-between gap-3 items-center">
-                  <div className="flex  justify-between gap-3 md:gap-10 w-full flex-wrap items-center">
+                  <div className="flex  justify-between gap-3 md:gap-10 w-full items-center">
 
                     <Link href={"/profile/listings"}>
                       <h1 className="w-max font-light hover:scale-105 hover:font-bold transition-all text-sm md:text-lg">Your Listings</h1>
