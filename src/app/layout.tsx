@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
 import './globals.css'
 import { Toaster, toast } from 'sonner'
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Noroff Auction - JO',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <Toaster />
         <Navbar />
         {children}
