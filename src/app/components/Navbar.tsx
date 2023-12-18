@@ -2,15 +2,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { LogOut, } from "lucide-react";
-import { Toaster, toast } from 'sonner'
+
+import { toast } from 'sonner'
 import Settings from "./Settings";
 import '../globals.css'
 
 import Image from "next/image";
 
 
-import { MenuIcon, X } from "lucide-react";
+import { X } from "lucide-react";
 
 
 interface UserProfile {
